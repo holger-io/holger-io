@@ -1,0 +1,30 @@
+@charset "utf-8";
+html,
+body {
+    color: #aaaaaa !important;
+    background-color: #202020 !important;
+}
+
+.vssue-new-comment-input {
+    background-color: #202020 !important;
+}
+
+article.markdown-body {
+    color: #aaaaaa;
+}
+
+.meta_mi {
+    color: #bdbdbd !important;
+}
+
+.meta_li {
+    color: #aaaaaa !important;
+}
+
+.v[data-class=v] .vcards .vcard .vcontent.expand:after {
+    background: rgb(32 32 32) !important;
+}
+
+.v[data-class=v] .vcards .vcard .vcontent.expand:before {
+    background: linear-gradient(180deg,rgb(32 32 32 / 8%),rgb(32 32 32)) !important;
+}

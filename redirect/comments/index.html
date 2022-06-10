@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta name="description" content="669电台 | 讨论区" />
+    <meta name="author" content="拾吾,拾玖" />
+    <meta name="keywords" content="留言板,Radio 669,669,评论,互动,669电台" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://holger.net.cn/redirect/comments/" />
+    <meta property="og:title" content="669电台 | 讨论区" />
+    <meta property="og:description" content="669电台 | 讨论区" />
+    <meta property="og:image" content="/avatar.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="669电台 | 讨论区" />
+    <meta name="twitter:description" content="669电台 | 讨论区" />
+    <meta name="apple-mobile-web-app-capable" content="no" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="day.css" />
+    <link id="dark-theme" rel="stylesheet" href="night.css" media="(prefers-color-scheme: dark)" data-original-media="(prefers-color-scheme: dark)" />
+    <link id="daily-theme" rel="stylesheet" href="day.css" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" data-original-media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)" />
+    <link rel="shortcut icon" href="/avatar.png" />
+    <link rel="icon" href="/avatar.png" />
+    <script async src="theme_auto.js"></script>
+    <script async defer data-website-id="7bfcaedf-26a8-4584-8ebe-60857a59c5ea" src="https://stats.dragon-fly.club/umami.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3C0DV7Y6F3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-3C0DV7Y6F3');
+    </script>
+    <title>669电台 | 讨论区</title>
+    <script async>
+        var base64EncodeChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+        var base64DecodeChars = new Array(-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 62, -1, -1, -1, 63, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, -1, -1, -1, -1, -1, -1, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, -1, -1, -1, -1, -1, -1, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, -1, -1, -1, -1, -1);
+
+        function base64encode(str) {
+            var out, i, len;
+            var c1, c2, c3;
+            len = str.length;
+            i = 0;
+            out = "";
+            while (i < len) {
+                c1 = str.charCodeAt(i++) & 255;
+                if (i == len) {
+                    out += base64EncodeChars.charAt(c1 >> 2);
+                    out += base64EncodeChars.charAt((c1 & 3) << 4);
+                    out += "==";
+                    break
+                }
+                c2 = str.charCodeAt(i++);
+                if (i == len) {
+                    out += base64EncodeChars.charAt(c1 >> 2);
+                    out += base64EncodeChars.charAt(((c1 & 3) << 4) | ((c2 & 240) >> 4));
+                    out += base64EncodeChars.charAt((c2 & 15) << 2);
+                    out += "=";
+                    break
+                }
+                c3 = str.charCodeAt(i++);
+                out += base64EncodeChars.charAt(c1 >> 2);
+                out += base64EncodeChars.charAt(((c1 & 3) << 4) | ((c2 & 240) >> 4));
+                out += base64EncodeChars.charAt(((c2 & 15) << 2) | ((c3 & 192) >> 6));
+                out += base64EncodeChars.charAt(c3 & 63)
+            }
+            return out
+        }
+
+        function base64decode(str) {
+            var c1, c2, c3, c4;
+            var i, len, out;
+            len = str.length;
+            i = 0;
+            out = "";
+            while (i < len) {
+                do {
+                    c1 = base64DecodeChars[str.charCodeAt(i++) & 255]
+                } while (i < len && c1 == -1);
+                if (c1 == -1) {
+                    break
+                }
+                do {
+                    c2 = base64DecodeChars[str.charCodeAt(i++) & 255]
+                } while (i < len && c2 == -1);
+                if (c2 == -1) {
+                    break
+                }
+                out += String.fromCharCode((c1 << 2) | ((c2 & 48) >> 4));
+                do {
+                    c3 = str.charCodeAt(i++) & 255;
+                    if (c3 == 61) {
+                        return out
+                    }
+                    c3 = base64DecodeChars[c3]
+                } while (i < len && c3 == -1);
+                if (c3 == -1) {
+                    break
+                }
+                out += String.fromCharCode(((c2 & 15) << 4) | ((c3 & 60) >> 2));
+                do {
+                    c4 = str.charCodeAt(i++) & 255;
+                    if (c4 == 61) {
+                        return out
+                    }
+                    c4 = base64DecodeChars[c4]
+                } while (i < len && c4 == -1);
+                if (c4 == -1) {
+                    break
+                }
+                out += String.fromCharCode(((c3 & 3) << 6) | c4)
+            }
+            return out
+        }
+
+        function utf16to8(str) {
+            var out, i, len, c;
+            out = "";
+            len = str.length;
+            for (i = 0; i < len; i++) {
+                c = str.charCodeAt(i);
+                if ((c >= 1) && (c <= 127)) {
+                    out += str.charAt(i)
+                } else {
+                    if (c > 2047) {
+                        out += String.fromCharCode(224 | ((c >> 12) & 15));
+                        out += String.fromCharCode(128 | ((c >> 6) & 63));
+                        out += String.fromCharCode(128 | ((c >> 0) & 63))
+                    } else {
+                        out += String.fromCharCode(192 | ((c >> 6) & 31));
+                        out += String.fromCharCode(128 | ((c >> 0) & 63))
+                    }
+                }
+            }
+            return out
+        }
+
+        function utf8to16(str) {
+            var out, i, len, c;
+            var char2, char3;
+            out = "";
+            len = str.length;
+            i = 0;
+            while (i < len) {
+                c = str.charCodeAt(i++);
+                switch (c >> 4) {
+                    case 0:
+                    case 1:
+                    case 2:
+                    case 3:
+                    case 4:
+                    case 5:
+                    case 6:
+                    case 7:
+                        out += str.charAt(i - 1);
+                        break;
+                    case 12:
+                    case 13:
+                        char2 = str.charCodeAt(i++);
+                        out += String.fromCharCode(((c & 31) << 6) | (char2 & 63));
+                        break;
+                    case 14:
+                        char2 = str.charCodeAt(i++);
+                        char3 = str.charCodeAt(i++);
+                        out += String.fromCharCode(((c & 15) << 12) | ((char2 & 63) << 6) | ((char3 & 63) << 0));
+                        break
+                }
+            }
+            return out
+        }
+
+        function doit() {
+            var f = document.f;
+            f.output.value = base64encode(utf16to8(f.source.value));
+            f.decode.value = utf8to16(base64decode(f.output.value))
+        };
+
+        function getQueryString(key) {
+            var str = location.search;
+            str = str.substring(1, str.length);
+            var arr = str.split("&");
+            var obj = new Object();
+            for (var i = 0; i < arr.length; i++) {
+                var tmp_arr = arr[i].split("=");
+                obj[decodeURIComponent(tmp_arr[0])] = decodeURIComponent(tmp_arr[1]);
+            }
+            return obj[key];
+        };
+        var metaList = document.getElementsByTagName("meta");
+
+        des = getQueryString("des");
+        if (des !== undefined) {
+            desc = document.querySelector("meta[name=description]");
+            desc.setAttribute('content', des);
+            for (var i = 0; i < metaList.length; i++) {
+                if (metaList[i].getAttribute("property") == "og:description") {
+                    metaList[i].content = des;
+                }
+            };
+            for (var i = 0; i < metaList.length; i++) {
+                if (metaList[i].getAttribute("name") == "twitter:description") {
+                    metaList[i].content = des;
+                }
+            }
+        }
+        keyw = getQueryString("keyw");
+        if (keyw !== undefined) {
+            keywo = document.querySelector("meta[name=keywords]");
+            keywo.setAttribute('content', keyw)
+        }
+        autho = getQueryString("author");
+        if (autho !== undefined) {
+            authoo = document.querySelector("meta[name=author]");
+            authoo.setAttribute('content', autho)
+        }
+        ogImg = getQueryString("ogImg");
+        if (ogImg !== undefined) {
+            for (var i = 0; i < metaList.length; i++) {
+                if (metaList[i].getAttribute("property") == "og:image") {
+                    metaList[i].content = ogImg
+                }
+            }
+        }
+        for (var i = 0; i < metaList.length; i++) {
+            if (metaList[i].getAttribute("property") == "og:url") {
+                metaList[i].content = location.href;
+            }
+        }
+        /** if (jump_url == base64encode(base64decode(jump_url))) {
+        jump_url = base64decode(jump_url);
+        }
+        if (jump_url == "blog") {
+        jump_url = "https://blog.holger.net.cn/";
+        }
+        if (jump_url == "sns") {
+        jump_url = "https://sns.holger.net.cn/";
+        }
+        if (jump_url == "pic") {
+        jump_url = "https://pic.holger.net.cn/";
+        }
+        var UrlReg = "^((http|https|thunder|qqdl|ed2k|Flashget|qbrowser|ftp|rtsp|mms)://)";
+        if (jump_url == null || jump_url.toString().length < 1 || !jump_url.match(UrlReg)) {
+        document.title = "Invalid Arguments, go to homepage...";
+        jump_url = "https://blog.holger.net.cn";
+        }
+        setTimeout(function link_jump() {
+        location.href = jump_url;
+        }, 5000);
+        setTimeout(function() {
+        window.opener = null;
+        window.close();
+        }, 30000);**/
+    </script>
+    <!--Base 64 解码及跳转 © https://go.holger.net.cn/ -->
+</head>
+<!--
+    Query String Template: 
+
+    ?title=1q%40%E6%B5%8B&des=2%EF%BC%88u%E6%88%91&img=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fholgerhuo%2Fcdn%2Fpicgo%2F20201222211227.png&imgDark=&ogImg=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fholgerhuo%2Fcdn%2Fpicgo%2F20201222211315.jpg&con=%3Cstyle%3Evideo%20%7Bmax-width%3A%20400px%20!important%3Bwidth%3A%20100%25%20!important%3B%7D%3C%2Fstyle%3E%3Cvideo%20controls%20src%3D%22https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fholgerhuo%2Fcdn%2Fpenguinproof_1080p.mp4%22%3E%3C%2Fvideo%3E&id=201221&keyw=key1%2C22%2C%E6%88%91%2C%EF%BC%8C&author=%E8%8E%B9%E8%8E%B9%E5%8D%95%E6%8E%A8%E4%BA%BA%26%E6%8B%BE%E5%90%BE
+
+
+    title: 1q@测
+    description: 2（u我
+    img: https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fholgerhuo%2Fcdn%2Fpicgo%2F20201222211227.png
+    imgDark: https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fholgerhuo%2Fcdn%2Fpicgo%2F20201222211315.jpg
+    ogImg: https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fholgerhuo%2Fcdn%2Fpicgo%2F20201222211315.jpg
+    con: %3Cstyle%3Evideo%20%7Bmax-width%3A%20400px%20!important%3Bwidth%3A%20100%25%20!important%3B%7D%3C%2Fstyle%3E%3Cvideo%20controls%20src%3D%22https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fholgerhuo%2Fcdn%2Fpenguinproof_1080p.mp4%22%3E%3C%2Fvideo%3E
+    keyw: key1,22,我,，
+    author: 莹莹单推人&拾吾
+
+    © https://github.com/holgerhuo/
+
+    -->
+
+<body>
+    <div class="container">
+        <div class="inner">
+            <div id="meta">
+                <h1>
+                    <span id="title">669电台 | 讨论区</span>
+                </h1>
+                <p class="subtitle">
+                    <span id="subtitle">669电台 | 讨论区</span>
+                </p>
+            </div>
+            <div id="jump" style="display: none;">
+                <p class="subtitle" style="margin-top: 30px; font-size:large">
+                    <a href="#vcomments"><span id="subtitle">点我直达评论区</span></a>
+                </p>
+            </div>
+            <div id="dyncon"></div>
+            <img id="dynimg" style="padding-right: 0px !important;padding-left: 0px !important;max-width: 400px !important;width: 100% !important;padding-bottom: 0px !important;">
+            <script>
+                title = getQueryString("title");
+                if (title !== undefined) {
+                    document.title = title;
+                    document.getElementById("title").innerHTML = title;
+                    for (var i = 0; i < metaList.length; i++) {
+                        if (metaList[i].getAttribute("property") == "og:title") {
+                            metaList[i].content = title;
+                        }
+                    };
+                    for (var i = 0; i < metaList.length; i++) {
+                        if (metaList[i].getAttribute("name") == "twitter:title") {
+                            metaList[i].content = title;
+                        }
+                    }
+                }
+                img_u = getQueryString("img");
+                if (img_u !== undefined) {
+                    document.getElementById("dynimg").src = img_u;
+                    document.getElementById("meta").style.display = "none";
+                    document.getElementById("jump").style.display = "block";
+                    imgd_u = getQueryString("imgDark");
+                    if (imgd_u !== undefined) {
+                        let prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                        if (prefersDarkMode) {
+                            document.getElementById("dynimg").src = imgd_u;
+                        }
+                        let media = window.matchMedia('(prefers-color-scheme: dark)');
+                        let callback = (e) => {
+                            let prefersDarkMode = e.matches;
+                            if (prefersDarkMode) {
+                                document.getElementById("dynimg").src = imgd_u;
+                            } else {
+                                document.getElementById("dynimg").src = img_u;
+                            }
+                        };
+                        if (typeof media.addEventListener === 'function') {
+                            media.addEventListener('change', callback);
+                        } else if (typeof media.addListener === 'function') {
+                            media.addListener(callback);
+                        }
+                    }
+                }
+                con = getQueryString("con");
+                if (con !== undefined) {
+                    document.getElementById("dyncon").innerHTML = con;
+                    document.getElementById("meta").style.display = "none";
+                    document.getElementById("jump").style.display = "block";
+                }
+            </script>
+            <img src="https://cdn.jsdelivr.net/gh/holgerhuo/cdn/picgo/20201221220000.jpg" style="padding-right: 0px !important;padding-left: 0px !important;max-width: 200px !important;width: 50% !important;padding-bottom: 5px !important;padding-top:10px">
+            <br><span>长按扫描二维码关注Radio 669~</span>
+            <div id="vcomments" style="padding-top: 40px;"></div>
+            <script src="https://cdn.jsdelivr.net/gh/holgerhuo/Valine@1.4.17/dist/Valine.min.js"></script>
+            <script>
+                id = getQueryString("id");
+                new Valine({
+                    el: '#vcomments',
+                    appId: '1azp0Eup2fb2Q5uB9h50gtWO-MdYXbMMI',
+                    appKey: '365AjJyDMs4d84v5Rmj6XH8v',
+                    path: id,
+                    recordIP: true,
+                    enableQQ: true,
+                    metaPlaceholder: {
+                        "nick": "昵称/QQ号",
+                        "mail": "邮箱（完全保密）"
+                    },
+                    serverURLs: 'https://1azp0eup.engine.lncldglobal.com',
+                    placeholder: "填写邮箱可以及时收到回复哦(●'◡'●) 填入QQ号可自动抓取昵称及头像~",
+                    master: '10371d189acfbe530de499b8f46a7e29', //博主邮箱md5
+                    tagMeta: ["669的小可爱~", "669的建设者们", "粉丝"], //标识字段名
+                    friends: ["86be1601bb52b3cf4e059c1dda0a9139", "e1a1b3928cc3469e2d8a320ca15d434e", "88763a3bf015b4c5d3b1cc522fe2f0d2"],
+                })
+            </script>
+            <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+            <script>
+                if (window.location.hash) {
+                    var checkExist = setInterval(function() {
+                        if ($(window.location.hash).length) {
+                            $('html, body').animate({
+                                scrollTop: $(window.location.hash).offset().top - 90
+                            }, 1000);
+                            clearInterval(checkExist);
+                        }
+                    }, 100);
+                }
+            </script>
+        </div>
+        <div>
+            <p style="
+          text-align: center;
+          max-width: 400px;
+          width: 100%;
+          margin-bottom: 0px;
+        ">
+                共<span id="busuanzi_value_page_pv"></span>人参与讨论~
+            </p>
+            <p style="
+          margin-top: 10px;
+          text-align: center;
+          max-width: 400px;
+          width: 100%;
+          font-size: small;
+        ">
+                ©️ 2020 <a href="#" target="_blank">拾吾与拾玖</a>
+                <!-- |
+                <a href="/chat/" target="_blank" class="lang" data-locale="cm">留言区 QwQ</a> |
+                <a href="/changelogs/" target="_blank" class="lang" data-locale="changelog">更新日志</a>
+
+            </p>-->
+                <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        </div>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css" />
+    </div>
+    <div class="ggad">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- Radio 669 Article Discussion -->
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9251082595386983" data-ad-slot="9194847055" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+</body>
+
+</html>

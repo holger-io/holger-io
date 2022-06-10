@@ -1,0 +1,183 @@
+@charset "utf-8";
+body,
+html {
+    color: #3b3b3b !important;
+    background-color: #fafcff !important;
+    height: 100% !important;
+    text-align: -webkit-center !important;
+    text-align: center !important;
+    text-align: -moz-center !important;
+    font-family: Josefin Sans, -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif, Helvetica Neue For Number, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB, "Microsoft YaHei", Helvetica Neue, Helvetica, Arial, sans-serif !important;
+}
+
+.meta {
+    margin-bottom: 5px;
+    margin-left: 20px;
+    margin-right: 30px;
+}
+
+.meta_mi {
+    font-weight: bold;
+}
+
+.meta_li {
+    font-weight: lighter;
+}
+
+.vssue_con {
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.gad {
+    width: 600px;
+    max-width: 90%;
+}
+
+.container {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    max-width: 400px !important;
+    width: 100% !important;
+    padding-bottom: 40px !important;
+}
+
+.hidden {
+    visibility: hidden;
+    display: block !important;
+    font-size: small;
+    font-weight: lighter;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    color: #746f6f;
+}
+
+input {
+    margin-top: 15px;
+    padding: 5px;
+}
+
+label {
+    font-weight: normal !important;
+}
+
+.play,
+.play.playing {
+    background: transparent;
+    transition: 100ms all ease;
+    -webkit-animation: rotation 2s infinite linear;
+    -moz-animation: rotation 2s infinite linear;
+    animation: rotation 2s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
+
+@-moz-keyframes rotation {
+    from {
+        -moz-transform: rotate(0deg);
+    }
+    to {
+        -moz-transform: rotate(359deg);
+    }
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+.play.paused {
+    -webkit-animation: none;
+    animation: none;
+    -moz-animation: none;
+}
+
+.inner {
+    position: relative;
+}
+
+h1 {
+    margin-top: 30px !important;
+    font-weight: bold !important;
+    font-size: 300% !important;
+}
+
+.notice {
+    font-size: small;
+    font-weight: lighter;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    color: #746f6f;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    height: 85px;
+    max-width: 400px;
+    width: 100%;
+}
+
+article.markdown-body {
+    text-align: left !important;
+}
+
+.subtitle {
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#veditor {
+    /**background-image: url(https://cdn.jsdelivr.net/gh/drew233/cdn/20200409110727.webp);**/
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: rgba(255, 255, 255, 0);
+    resize: vertical
+}
+
+#veditor:focus {
+    background-position-y: 200px;
+    transition: all 0.2s ease-in-out 0s;
+}
+
+img.vimg {
+    transition: all 1s
+        /* 旋转时间为 1s */
+}
+
+img.vimg:hover {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+}
+
+#vcomments .vcards .vcard {
+    padding: 15px 20px 0 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 4px 1px rgba(0, 0, 0, .12);
+    transition: all .3s
+}
+
+#vcomments .vcards .vcard:hover {
+    box-shadow: 0 0 8px 3px rgba(0, 0, 0, .12)
+}
+
+#vcomments .vcards .vcard .vh .vcard {
+    border: none;
+    box-shadow: none;
+}
